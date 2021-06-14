@@ -11,24 +11,41 @@ public class StepDefinition extends  Steps{
         launchBrowser();
 
     }
-
-    @When("I search and select book")
-    public void i_search_and_select_book() {
+    @Given("I select “White Papers & eBooks”")
+    public void i_select_white_papers_e_books() {
         // Write code here that turns the phrase above into concrete actions
-        searchItemAndSelectBook("Who are thou");
+        navigate();
+    }
+
+    @Given("Verify Title reads “White Papers”")
+    public void verify_title_reads_white_papers() {
+        // Write code here that turns the phrase above into concrete actions
+        verifyTitle();
+    }
+
+    @Given("Click on any white paper tile")
+    public void click_on_any_white_paper_tile() {
+        // Write code here that turns the phrase above into concrete actions
+        navigatetoForm();
+    }
+
+
+    @Given("I Fill and submit the form")
+    public void i_fill_and_submit_the_form() {
+        // Write code here that turns the phrase above into concrete actions
+        fillForm();
+    }
+
+    @Then("I Add screenshot of the error messages")
+    public void i_add_screenshot_of_the_error_messages() {
+        // Write code here that turns the phrase above into concrete actions
+            takescreenshot();
+    }
+
+    @Then("I Validate all error messages")
+    public void i_validate_all_error_messages() {
+        // Write code here that turns the phrase above into concrete actions
 
     }
 
-    @Then("I add book to cart")
-    public void i_add_book_to_cart() {
-        // Write code here that turns the phrase above into concrete actions
-        addItemToCart();
-
-    }
-
-    @Then("i verify the correct book is added")
-    public void i_verify_the_correct_book_is_added() {
-        // Write code here that turns the phrase above into concrete actions
-        verifyItem();
-    }
 }
